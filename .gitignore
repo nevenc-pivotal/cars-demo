@@ -1,0 +1,17 @@
+*.class
+*.jar
+*.war
+*.ear
+
+target/
+.mvn/
+
+.idea/
+*.iml
+
+.project
+.settings/
+.metadata
+bin/
+tmp/
+*.launch
