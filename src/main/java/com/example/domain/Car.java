@@ -9,7 +9,7 @@ import java.util.List;
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
     @JsonProperty(value="car_name")
@@ -24,7 +24,7 @@ public class Car {
     @JsonProperty(value="car_tags")
     @ElementCollection
     @CollectionTable(name="tag", joinColumns=@JoinColumn(name="car_id"))
-    @Column(name="tag_name")
+    @Column(name="value")
     private List<String> tags;
 
     public Long getId() {

@@ -1,0 +1,19 @@
+--
+-- V1__initialize_tables.sql
+--
+
+DROP TABLE IF EXISTS car;
+CREATE TABLE car (
+  id    BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  name  VARCHAR(255) NOT NULL,
+  make  VARCHAR(255),
+  model VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS tag;
+CREATE TABLE tag (
+  car_id BIGINT NOT NULL,
+  value VARCHAR(255) NOT NULL,
+  FOREIGN KEY(car_id) REFERENCES car(id)
+);
+
